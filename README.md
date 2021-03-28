@@ -2,7 +2,6 @@
 
 
   <h1>tech-related-news <h1>
-  ![badge](https://img.shields.io/badge/license-Apache License 2.0-blue)<br />
 
   ## <h2>Description</h2>
   Make a blog site that you can post code related topics.
