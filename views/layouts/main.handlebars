@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            
+            <nav style="background-color: rgb(46, 5, 5);">
+                {{#if loggedIn}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+                {{/if}}
+            </nav>
+            <h1 class="header">
+                <a href="/">The Tech Blog</a>
+            </h1>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    {{#if loggedOut}}
+    <script src="/javascript/login.js"></script>
+    <script src="/javascript/signup.js"></script>
+    {{/if}}
+</body>
+
+</html>
